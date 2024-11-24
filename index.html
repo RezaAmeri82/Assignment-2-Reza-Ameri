@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2a</title>
+</head>
+<body>
+    <!-- Part 2a: ODD LOOP -->
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 !== 0) { // Odd index
+                if (i === 5) {
+                    document.write('Q ');
+                } else {
+                    document.write('O ');
+                }
+            } else { // Even index
+                document.write('X ');
+            }
+        }
+    </script>
+
+    <!-- Part 2b: ODDER LOOPS -->
+    <script>
+        for (let i = 1; i <= 20; i++) {
+            document.write('O');
+
+            // Random number of spaces between 1 and 5
+            let spaces = Math.floor(Math.random() * 5) + 1;
+            for (let j = 0; j < spaces; j++) {
+                document.write('&nbsp;');
+            }
+        }
+    </script>
+    
+    <!-- Part 2c: LOOPDI-LOOP -->
+    <script>
+        let names = ["alice", "bob", "charlie", "dave"];
+
+        for (let i = 0; i < names.length; i++) {
+            // Display each letter individually in the console
+            for (let j = 0; j < names[i].length; j++) {
+                console.log(names[i][j]);
+            }
+
+            // Turn the first letter of each name to uppercase and display the modified name
+            names[i] = names[i].charAt(0).toUpperCase() + names[i].slice(1);
+            console.log('Modified name:', names[i]);
+        }
+    </script>
+</body>
+</html>
